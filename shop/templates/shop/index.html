@@ -10,6 +10,22 @@
 <body>
   <div class="container">
     <div class="row">
+      <div class="col-md-12">
+        <form class="card card-sm">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col">
+              <input type="search" name="itemName" placeholder="Search items" class="form-control form-control-borderless">
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-success" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="row">
       {% for product in productObjects %}
         <div class="col-md-3">
           <div class="card">
