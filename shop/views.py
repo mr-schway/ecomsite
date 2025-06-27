@@ -9,6 +9,9 @@ def index(request):
 
   # Search
   itemName = request.GET.get('itemName')
+  if itemName is None and 'itemName' in request.session:
+    itemName = request.session['itemName']
+  request.session['itemName'] = itemName
   if itemName != '' and itemName is not None:
     productObjects = productObjects.filter(title__icontains = itemName)
 
